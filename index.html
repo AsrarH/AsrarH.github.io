@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asrar Alruwayqi - Computer Vision</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link rel="icon" href="data/cube_3d.ico">
+
     <style>
         /* Reset some default styles */
-        body, h1, h2, p {
+        body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: #f5f5f5;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(13, 12, 12, 0.275);
+            box-shadow: 0 0 10px rgba(46, 45, 45, 0.1);
         }
 
         h1 {
@@ -51,9 +56,13 @@
         img.profile-photo {
             display: block;
             margin: 0 auto;
-            max-width: 100%;
-            border: 3px solid #fff;
+            max-width: 90%;
             border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        img.profile-photo:hover {
+            transform: scale(1.1);
         }
 
         .contact-links {
@@ -65,72 +74,137 @@
             color: #007bff;
             margin: 0 10px;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         .contact-links a:hover {
-            text-decoration: underline;
-        }
-         {
-            background-color: black;
-            color: #333; /* Set the text color to a different color, e.g., dark gray */
+            color: #f00;
         }
 
-        /* Style for normal links */
         a {
-            color: #00f; /* Default link color, e.g., blue */
-            text-decoration: none; /* Remove underlines */
-            transition: color 0.3s ease; /* Smooth color transition */
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        /* Style for links on hover */
         a:hover {
-            color: #f00; /* Change link color on hover, e.g., red */
-            /* You can add other animation properties here */
+            color: rgb(72, 0, 255);
         }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fff;
+
+}
+.social-links a i {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px; /* space between icons */
+}
+.icon-container {
+    display: flex;           /* Enables flexbox */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+    height: 100px;           /* or whatever height you want for your container */
+    width: 100%;             /* takes full width, can be adjusted based on requirement */
+    flex-wrap: wrap;         /* allows icons to wrap to next line if they don't fit */
+}
+
+.social-icon {
+    margin: 0 5px;           /* adds a small space between icons */
+    width: 24px; 
+    height: auto;
+}
+
+.myPatternedBackground {
+    background-color: linear-gradient(to bottom, black, white);
+    opacity: 0.8;
+    background-image:  linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), 
+                       linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), 
+                       linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), 
+                       linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), 
+                       linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777), 
+                       linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+}
+
+
     </style>
 </head>
+
 <body>
+    <div class="myPatternedBackground">
     <div class="container">
-        <h1>Asrar Alruwayqi</h1>
-        <p>I am a <a href="https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision/">Masters in Computer Vision</a> (MSCV) student at the <a href="https://www.ri.cmu.edu">Robotics Institute</a>, advised by <a href="http://shubhtuls.github.io">Prof. Shubham Tulsiani</a>.</p>
+        
+
+        <h2 style="color:#fff">I'm <span class="typing" id="typed-output"></span></h2>
+        <script>
+            var options = {
+                strings: ["a Masters in Computer Vision student", "passionate about research", "an AI enthusiast", "looking for new challenges"],
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 1500,
+                loop: true
+            };
+        
+            var typed = new Typed("#typed-output", options);
+        </script>
+        
+        <p class="tagline">Delving into the Intricacies of Computer Vision.</p>
+        <p>Currently, I am pursuing my <a href="https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision/">Master's in Computer Vision</a> (MSCV) at the renowned <a href="https://www.ri.cmu.edu">Robotics Institute</a> under the mentorship of <a href="http://shubhtuls.github.io">Prof. Shubham Tulsiani</a>.</p>
         <p>
-            At <a href="https://www.cs.cmu.edu/">Carnegie Mellon University School of Computer Science</a>, I worked with <a href="https://xulabs.github.io/min-xu/">Prof. Min Xu</a> and <a href="https://alldbi.github.io">Dr. Ali Dabouei</a> as a Research Assistant. Before joining CMU, I received a bachelor's degree in Computer Science. Then I worked as a Research Engineer at <a href="https://sdaia.gov.sa/ncai/?Lang=en&page=SectionHome#">National Center for AI</a>, advised by <a href="https://scholar.google.com/citations?hl=en&user=LzBmKhQAAAAJ&view_op=list_works&sortby=pubdate">Raied Aljadaany</a>.
+            My academic journey at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University School of Computer Science</a> has been enriched by collaborations with eminent scholars like <a href="https://xulabs.github.io/min-xu/">Prof. Min Xu</a> and <a href="https://alldbi.github.io">Dr. Ali Dabouei</a>, with whom I served as a Research Assistant. Before embarking on my postgraduate studies, I earned a Bachelor's degree in Computer Science. Post my undergraduate studies, I contributed as a Research Engineer at the <a href="https://sdaia.gov.sa/ncai/?Lang=en&page=SectionHome#">National Center for AI</a>, receiving guidance from <a href="https://scholar.google.com/citations?hl=en&user=LzBmKhQAAAAJ&view_op=list_works&sortby=pubdate">Raied Aljadaany</a>.
         </p>
-        <div class="contact-links">
-            <a href="mailto:aalrwiqi@cmu.edu">Email</a>
-            <a href="Alruwayqi,Asrar.pdf">CV</a>
-            <a href="https://linkedin.com/in/asrarh">Linkedin</a>
-            <a href="https://github.com/Asrarh/">Github</a>
+        
+        <div class="icon-container">
+            <!-- LinkedIn Icon -->
+            <a href="https://linkedin.com/in/asrarh" target="_blank" class="linkedin" title="LinkedIn">
+                <img class="social-icon" src="data/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            
+            <!-- GitHub Icon -->
+            <a href="https://github.com/Asrarh/" target="_blank" class="github" title="GitHub">
+                <img class="social-icon" src="data/github.png" alt="GitHub Icon">
+            </a>
+            
+            <!-- Email Icon -->
+            <a href="mailto:aalrwiqi@cmu.edu" target="_blank" class="email" title="Email">
+                <img class="social-icon" src="data/mail.png" alt="Email Icon">
+            </a>
+            
+            <!-- PDF/Resume Icon -->
+            <a href="data/Alruwayqi,Asrar.pdf" target="_blank" class="cv" title="Resume/CV">
+                <img class="social-icon" src="data/pdf.png" alt="Resume/CV Icon">
+            </a>
         </div>
-        <img src="images/cube_3d.gif" alt="profile photo" class="profile-photo">
-        <h2>Research</h2>
+        
+        
+        <img src="data/cube_3d.gif" alt="profile photo" class="profile-photo">
+        <h2>Research Interests</h2>
         <p>
-            I'm passionate about computer vision, with a focus on 3D reconstruction, optimization, and computational geometry. My research aims to push the boundaries of what's possible in these areas and contribute to the advancement of computer vision technologies.
+            My ardor for computer vision is deeply rooted, with a special emphasis on 3D reconstruction, optimization, and computational geometry. I believe these areas hold the key to unlocking new dimensions in how machines perceive and interpret the world. Through rigorous research and experimentation, I aim to bridge the gap between theoretical algorithms and their practical applications. By integrating advanced techniques and methodologies, I am committed to pioneering innovations that will not only challenge but expand the existing paradigms of computer vision. My ultimate aspiration is to elevate and redefine the capabilities of computer vision technologies, ensuring they play an instrumental role in shaping a future where machines can seamlessly interact with and enhance our physical reality.
         </p>
+        
         <h2>Skills and Interests</h2>
-        <p>
-            Let me tell you a bit more about my skills and what I'm passionate about:
-        </p>
         <ul>
-            <li>
-                <strong>Programming Languages:</strong> Proficient in Python and C++ for developing computer vision algorithms and applications.
-            </li>
-            <li>
-                <strong>Deep Learning:</strong> Experience with deep learning frameworks like TensorFlow and PyTorch for building and training neural networks.
-            </li>
-            <li>
-                <strong>Computer Vision:</strong> Strong interest in computer vision, particularly in 3D reconstruction, object detection, and image segmentation.
-            </li>
-            <li>
-                <strong>Problem Solving:</strong> Enjoy solving complex problems and puzzles, which often translates into finding innovative solutions in my work.
-            </li>
-            <li>
-                <strong>Extracurricular Activities:</strong> Outside of academics, I'm an avid hiker and enjoy exploring nature whenever I get the chance. I'm also a passionate photographer, capturing the beauty of the world through my lens.
-            </li>
+            <li><strong>Programming Languages:</strong> Proficient in Python and familiar with C++ for developing computer vision algorithms and applications.</li>
+            <li><strong>Deep Learning:</strong> Experience with deep learning frameworks like TensorFlow and PyTorch for building and training neural networks.</li>
+            <li><strong>Computer Vision:</strong> Strong interest in computer vision, particularly in 3D reconstruction, object detection, and image segmentation.</li>
+            <li><strong>Problem Solving:</strong> Enjoy solving complex problems and puzzles, which often translates into finding innovative solutions in my work.</li>
+            <li><strong>Extracurricular Activities:</strong> Outside of academics, I'm an avid hiker and enjoy exploring nature whenever I get the chance. I'm also a passionate photographer, capturing the beauty of the world through my lens.</li>
         </ul>
-        <p>
-            These skills and interests not only drive my academic and professional pursuits but also add a rich dimension to my personal life. I'm always open to new challenges and opportunities to learn and grow.
-        </p>
+        <footer>&copy; 2023 Asrar Alruwayqi. All Rights Reserved.</footer>
     </div>
+</div>
 </body>
+
 </html>
