@@ -16,6 +16,7 @@
     }
     h1, h2 {
       font-weight: normal;
+      text-align: center;
     }
     a {
       color: #0077cc;
@@ -24,11 +25,29 @@
     a:hover {
       text-decoration: underline;
     }
-    .profile {
+    .profile-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+    .profile-img {
       width: 150px;
+      height: 150px;
+      object-fit: cover;
       border-radius: 50%;
-      display: block;
-      margin: 20px auto;
+    }
+    .bio {
+      max-width: 500px;
+    }
+    .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .links a {
+      margin: 0 8px;
+      font-size: 14px;
     }
     .project-entry {
       display: flex;
@@ -38,7 +57,7 @@
       margin-bottom: 30px;
     }
     .project-entry img {
-      width: 150px;
+      max-width: 180px;
       height: auto;
       border-radius: 6px;
       margin-right: 15px;
@@ -46,20 +65,14 @@
     .project-entry div {
       flex: 1;
     }
-    .contact {
-      margin-top: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
   </style>
 </head>
 
 <body>
   <h1>Asrar Alruwayqi</h1>
-
+  <div class="profile-wrapper">
   <img src="data/images.jpeg" alt="Asrar Alruwayqi Profile" class="profile" />
-
+   <div class="bio">
   <p>
     I am a Researcher working at the intersection of <strong>computer vision, 3D geometry, and AI</strong>.
     I earned my Master’s in Computer Vision from <a href="https://www.ri.cmu.edu">Carnegie Mellon University's Robotics Institute</a>,
@@ -67,18 +80,25 @@
     <a href="https://www.cs.cmu.edu/~ftorre/">Fernando De la Torre</a>,
     <a href="https://www.laszlojeni.com/">László A. Jeni</a>, and
     <a href="https://www.cs.cmu.edu/~jkh/">Jessica Hodgins</a>.
-  </p>
-
+  </p>-
+    </div>
+    </div>
+<div class="links">
+<a href="mailto:aalrwiqi@alumni.cmu.edu">Email</a><br />
+      <a href="https://www.linkedin.com/in/asrarh/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/Asrarh/" target="_blank">GitHub</a> |
+    <a href="https://scholar.google.com/citations?user=xVfhj3kAAAAJ&hl=en&authuser=1&oi=ao">Scholar</a> /
+    
+  </div>
   <h2>Research Interests</h2>
   <p>
-    My research focuses on inferring structured representations of the physical world including geometry, motion, lighting, and material properties from images and video.. I am particularly interested in radiance fields, 4D dynamic scene reconstruction, and hybrid explicit-implicit representations. A central goal of my work is to enable temporally consistent, compact, and interpretable reconstructions of shape, motion, lighting, and material appearance especially under occlusion or limited supervision. I also explore the integration of diffusion models for refinement and uncertainty-aware prediction.
-  </p>
+My research focuses on inferring structured representations of the physical world—such as geometry, motion, illumination, and material appearance from images and video. I am particularly interested in radiance fields, 4D dynamic scene reconstruction, and hybrid explicit-implicit representations. A central objective of my work is to develop compact, temporally consistent, and interpretable models that can reconstruct complex scenes under challenging conditions such as occlusion and sparse supervision. I also explore the use of diffusion models for fine-grained refinement and uncertainty-aware reasoning in dynamic environments.  </p>
 
 
   <h2>Projects</h2>
 
   <div class="project-entry">
-    <img src="data/img.png" alt="SHaDe Visualization">
+        <img src="/mnt/data/img.png" alt="SHaDe Visualization" style="max-width: 180px; height: auto; border-radius: 6px; margin-right: 15px;" />
     <div>
       <b>SHaDe: Compact and Consistent Dynamic 3D Reconstruction via Tri-Plane Deformation and Latent Diffusion</b><br>
       Asrar Alruwayqi<br>
